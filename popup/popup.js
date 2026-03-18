@@ -5,9 +5,11 @@
 (function () {
   'use strict';
 
+  const api = typeof browser !== 'undefined' ? browser : chrome;
+
   // ── i18n ──
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const msg = browser.i18n.getMessage(el.dataset.i18n);
+    const msg = api.i18n.getMessage(el.dataset.i18n);
     if (msg) el.textContent = msg;
   });
 
@@ -15,18 +17,16 @@
   const slider    = document.getElementById('slider');
   const gainNum   = document.getElementById('gainNum');
   const limiter   = document.getElementById('limiter');
-  const dot       = document.getElementById('dot');
-  const statusMsg = document.getElementById('statusMsg');
+  const logo      = document.getElementById('logo');
   const preBtns   = document.querySelectorAll('.pre');
 
   let tabId = null;
 
   // ── Helpers ──
-  function setStatus(type, key) {
-    dot.className = 'dot';
-    if (type === 'on')  dot.classList.add('on');
-    if (type === 'err') dot.classList.add('err');
-    statusMsg.textContent = browser.i18n.getMessage(key) || key;
+  function setStatus(type) {
+    logo.className = 'logo';
+    if (type === 'on')  logo.classList.add('on');
+    if (type === 'err') logo.classList.add('err');
   }
 
   function colorGain(val) {
@@ -48,22 +48,22 @@
 
   // ── Badge ──
   function badge(val) {
-    if (!browser.action?.setBadgeText) return;
+    if (!api.action?.setBadgeText) return;
     if (val === 100) {
-      browser.action.setBadgeText({ text: '', tabId });
+      api.action.setBadgeText({ text: '', tabId });
     } else {
-      browser.action.setBadgeText({ text: String(val), tabId });
+      api.action.setBadgeText({ text: String(val), tabId });
       let c = '#9b8aff';
       if (val >= 400) c = '#e85d5d';
       else if (val >= 250) c = '#e8a946';
-      browser.action.setBadgeBackgroundColor({ color: c, tabId });
+      api.action.setBadgeBackgroundColor({ color: c, tabId });
     }
   }
 
   // ── Communicate with content script ──
   function send(pct) {
     if (!tabId) return;
-    browser.tabs.sendMessage(tabId, {
+    api.tabs.sendMessage(tabId, {
       action: 'setGain',
       gain: pct / 100,
       limiter: limiter.checked
@@ -73,7 +73,7 @@
   }
 
   function inject(pct) {
-    browser.scripting.executeScript({
+    api.scripting.executeScript({
       target: { tabId },
       files: ['/content/content.js']
     }).then(() => {
@@ -103,12 +103,12 @@
   limiter.addEventListener('change', () => send(+slider.value));
 
   // ── Init ──
-  browser.tabs.query({ active: true, currentWindow: true }).then(async tabs => {
+  api.tabs.query({ active: true, currentWindow: true }).then(async tabs => {
     if (!tabs?.[0]) return setStatus('err', 'statusNoAccess');
     tabId = tabs[0].id;
 
     try {
-      const r = await browser.tabs.sendMessage(tabId, { action: 'getState' });
+      const r = await api.tabs.sendMessage(tabId, { action: 'getState' });
       if (r?.gain !== undefined) {
         const pct = Math.round(r.gain * 100);
         setUI(pct);

@@ -7,7 +7,7 @@
 <body>
   <!-- Logo + Title -->
   <header class="header">
-    <img src="../icons/icon.svg" alt="" class="logo">
+    <img src="../icons/icon.svg" id="logo" alt="" class="logo">
     <span class="title">Ghost<span class="title-accent">Volume</span></span>
   </header>
 
@@ -30,18 +30,12 @@
   </div>
 
   <!-- Safe mode toggle -->
-  <div class="opt">
+  <div class="opt" style="margin-bottom: 24px;">
     <div class="opt-text">
       <span data-i18n="limiterLabel">Safe Mode</span>
       <small data-i18n="limiterHint">Prevents distortion</small>
     </div>
     <label class="sw"><input type="checkbox" id="limiter" checked><span class="track"></span></label>
-  </div>
-
-  <!-- Status -->
-  <div class="status" id="status">
-    <span class="dot" id="dot"></span>
-    <span id="statusMsg" data-i18n="statusReady">Ready</span>
   </div>
 
   <!-- Privacy + Footer -->

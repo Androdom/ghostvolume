@@ -6,6 +6,8 @@
 (function () {
   'use strict';
 
+  const api = typeof browser !== 'undefined' ? browser : chrome;
+
   if (window.__ghostVolume) return;
   window.__ghostVolume = true;
 
@@ -97,21 +99,23 @@
   }, true);
 
   // Message handler
-  browser.runtime.onMessage.addListener(msg => {
+  api.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     if (msg.action === 'setGain') {
       const limChanged = msg.limiter !== state.limiter;
       state.limiter = msg.limiter ?? state.limiter;
       if (limChanged) reconnect();
       setGain(msg.gain);
-      return Promise.resolve({ success: true });
+      sendResponse({ success: true });
+      return false;
     }
 
     if (msg.action === 'getState') {
       scan();
-      return Promise.resolve({
+      sendResponse({
         gain: state.gain,
         limiter: state.limiter
       });
+      return false;
     }
 
     return false;

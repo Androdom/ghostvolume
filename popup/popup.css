@@ -207,34 +207,24 @@ body {
   transform: translateX(16px);
 }
 
-/* ── Status ── */
-.status {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 10px;
-  border-radius: 6px;
-  margin-bottom: 14px;
-  font-size: 11px;
-  color: rgba(255,255,255,0.4);
+/* ── Logo Status Glow ── */
+.logo {
+  transition: all 0.4s ease;
 }
 
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.2);
-  flex-shrink: 0;
-  transition: all 0.3s;
+.logo.on {
+  filter: drop-shadow(0 0 8px rgba(155, 138, 255, 0.8));
+  animation: float-glow 3s ease-in-out infinite;
 }
 
-.dot.on {
-  background: #9b8aff;
-  box-shadow: 0 0 6px rgba(155,138,255,0.6);
+.logo.err {
+  filter: drop-shadow(0 0 6px rgba(232, 93, 93, 0.8));
 }
 
-.dot.err {
-  background: #e85d5d;
+@keyframes float-glow {
+  0% { filter: drop-shadow(0 0 4px rgba(155, 138, 255, 0.5)); transform: translateY(0px); }
+  50% { filter: drop-shadow(0 0 12px rgba(155, 138, 255, 1)); transform: translateY(-2px); }
+  100% { filter: drop-shadow(0 0 4px rgba(155, 138, 255, 0.5)); transform: translateY(0px); }
 }
 
 /* ── Footer ── */

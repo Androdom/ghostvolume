@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- Logo + Title -->
+  <header class="header">
+    <img src="../icons/icon.svg" alt="" class="logo">
+    <span class="title">Ghost<span class="title-accent">Volume</span></span>
+  </header>
+
+  <!-- Gain display -->
+  <div class="gain-display">
+    <span class="gain-num" id="gainNum">100</span>
+    <span class="gain-pct">%</span>
+  </div>
+
+  <!-- Slider -->
+  <input type="range" id="slider" class="slider" min="100" max="600" step="5" value="100">
+
+  <!-- Presets -->
+  <div class="presets">
+    <button class="pre active" data-g="100">100</button>
+    <button class="pre" data-g="200">200</button>
+    <button class="pre" data-g="300">300</button>
+    <button class="pre" data-g="400">400</button>
+    <button class="pre" data-g="600">600</button>
+  </div>
+
+  <!-- Safe mode toggle -->
+  <div class="opt">
+    <div class="opt-text">
+      <span data-i18n="limiterLabel">Safe Mode</span>
+      <small data-i18n="limiterHint">Prevents distortion</small>
+    </div>
+    <label class="sw"><input type="checkbox" id="limiter" checked><span class="track"></span></label>
+  </div>
+
+  <!-- Status -->
+  <div class="status" id="status">
+    <span class="dot" id="dot"></span>
+    <span id="statusMsg" data-i18n="statusReady">Ready</span>
+  </div>
+
+  <!-- Privacy + Footer -->
+  <footer class="foot">
+    <span class="privacy" data-i18n="privacyNote">Zero data collected. Ever.</span>
+    <span class="credit"><span data-i18n="madeBy">by</span> <a href="https://www.androdom.com.tr" target="_blank" class="link">Androdom</a></span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

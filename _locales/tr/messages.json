@@ -1,0 +1,13 @@
+{
+  "extensionName": { "message": "GhostVolume" },
+  "extensionDescription": { "message": "Görünmez ses yükseltme. Sıfır izleme. Saf ses." },
+  "boostLabel": { "message": "Ses Yükseltme" },
+  "limiterLabel": { "message": "Güvenli Mod" },
+  "limiterHint": { "message": "Bozulmayı önler" },
+  "statusReady": { "message": "Hazır" },
+  "statusActive": { "message": "Aktif" },
+  "statusNoMedia": { "message": "Medya bulunamadı" },
+  "statusNoAccess": { "message": "Bu sayfaya erişilemiyor" },
+  "privacyNote": { "message": "Hiçbir veri toplanmaz. Asla." },
+  "madeBy": { "message": "by" }
+}

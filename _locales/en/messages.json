@@ -1,0 +1,13 @@
+{
+  "extensionName": { "message": "GhostVolume" },
+  "extensionDescription": { "message": "Invisible volume boost. Zero tracking. Pure sound." },
+  "boostLabel": { "message": "Volume Boost" },
+  "limiterLabel": { "message": "Safe Mode" },
+  "limiterHint": { "message": "Prevents distortion" },
+  "statusReady": { "message": "Ready" },
+  "statusActive": { "message": "Active" },
+  "statusNoMedia": { "message": "No media found" },
+  "statusNoAccess": { "message": "Cannot access this page" },
+  "privacyNote": { "message": "Zero data collected. Ever." },
+  "madeBy": { "message": "by" }
+}

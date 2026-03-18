@@ -15,7 +15,7 @@
 
 ## 👻 About
 
-**GhostVolume** is a minimalist, privacy-first Firefox extension that amplifies the audio of videos, live streams, and music in your browser. Unlike other volume boosters, GhostVolume guarantees **absolute privacy** and is designed to stay completely out of your way.
+**GhostVolume** is a minimalist, privacy-first browser extension that amplifies the audio of videos, live streams, and music in your browser. Unlike other volume boosters, GhostVolume guarantees **absolute privacy** and is designed to stay completely out of your way.
 
 ## ✨ Features
 
@@ -28,23 +28,32 @@
 
 ## 🚀 Installation
 
-### From Mozilla Add-ons (Coming Soon)
-A link to the official Mozilla Add-ons store will be placed here once the extension is published.
+### 1. From Add-on Stores (Coming Soon)
+Links to the official Chrome Web Store and Mozilla Add-ons store will be placed here once the extension is published.
 
-### Install from Source (For Developers & Testing)
+### 2. Manual Installation (For source & testing)
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Androdom/ghostvolume.git
-   ```
-2. Open Mozilla Firefox and navigate to `about:debugging#/runtime/this-firefox`.
-3. Click on the **"Load Temporary Add-on..."** button.
-4. Select the `manifest.json` file located in the cloned `ghost-volume` directory.
-5. The GhostVolume icon will appear in your toolbar. Click it to start boosting!
+First, download the source code:
+```bash
+git clone https://github.com/Androdom/ghostvolume.git
+```
+
+#### 🦊 For Mozilla Firefox:
+1. Open Firefox and navigate to `about:debugging#/runtime/this-firefox`.
+2. Click on the **"Load Temporary Add-on..."** button.
+3. Select the `manifest.json` file located in the cloned `ghost-volume` directory.
+4. GhostVolume is now ready to use!
+
+#### 🌍 For Google Chrome, Edge, and Chromium Browsers:
+1. Open your browser and navigate to `chrome://extensions/` (or `edge://extensions/`).
+2. Turn on **"Developer mode"** (usually a toggle in the top right corner).
+3. Click on the **"Load unpacked"** button.
+4. Select the entire cloned `ghost-volume` **folder**.
+5. Pin the GhostVolume icon to your toolbar and click it to start boosting!
 
 ## 🇹🇷 Türkçe Açıklama
 
-**GhostVolume**, tarayıcınızdaki ses seviyesini %600'e kadar yükseltebilen, güvenlik ve gizlilik odaklı minimalist bir Firefox eklentisidir.
+**GhostVolume**, tarayıcınızdaki ses seviyesini %600'e kadar yükseltebilen, güvenlik ve gizlilik odaklı minimalist bir eklentidir. Chrome, Edge ve Firefox ile uyumludur.
 
 - **Tam Gizlilik:** Yalnızca o an bulunduğunuz sekmeye erişim izni (`activeTab`) ister. Hangi siteleri gezdiğinizi veya ne izlediğinizi takip etmez.
 - **Güvenli Mod:** Akıllı ses sınırlayıcısı sayesinde yüksek seste yaşanan ses çatlamalarını ve hoparlör hasarlarını önler.

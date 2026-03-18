@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "__MSG_extensionName__",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "default_locale": "en",
   "description": "__MSG_extensionDescription__",
   "author": "sbg",
@@ -11,7 +11,7 @@
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",
       "48": "icons/icon48.png",
-      "96": "icons/icon.svg",
+      "96": "icons/icon96.png",
       "128": "icons/icon128.png"
     },
     "default_title": "__MSG_extensionName__"
@@ -24,13 +24,16 @@
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
     "48": "icons/icon48.png",
-    "96": "icons/icon.svg",
+    "96": "icons/icon96.png",
     "128": "icons/icon128.png"
   },
   "browser_specific_settings": {
     "gecko": {
       "id": "ghostvolume@androdom",
-      "strict_min_version": "109.0"
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
   }
 }

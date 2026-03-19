@@ -4,11 +4,16 @@
   <p><strong>Invisible volume boost. Zero tracking. Pure sound.</strong></p>
 
   <p>
-    <a href="https://github.com/Androdom/ghostvolume/releases">Releases</a> •
-    <a href="#installation">Installation</a> •
-    <a href="#features">Features</a> •
+    <a href="https://addons.mozilla.org/firefox/addon/ghostvolume/">AMO Store</a> •
+    <a href="#-installation">Installation</a> •
     <a href="PRIVACY.md">Privacy</a> •
     <a href="LICENSE">License</a>
+  </p>
+
+  <p>
+    <a href="https://github.com/Androdom/ghostvolume/releases"><img alt="Version" src="https://img.shields.io/badge/version-1.5.1-6a5acd.svg?style=flat-square" /></a>
+    <a href="https://addons.mozilla.org/firefox/addon/ghostvolume/"><img alt="Available on Firefox" src="https://img.shields.io/badge/Firefox_Add--on-FF7139?style=flat-square&logo=firefox-browser&logoColor=white" /></a>
+    <a href="LICENSE"><img alt="License: GPLv3" src="https://img.shields.io/badge/License-GPLv3-yellow.svg?style=flat-square" /></a>
   </p>
 </div>
 
@@ -16,63 +21,67 @@
 
 ## 👻 About
 
-**GhostVolume** is a minimalist, privacy-first browser extension that amplifies the audio of videos, live streams, and music in your browser. Unlike other volume boosters, GhostVolume guarantees **absolute privacy** and is designed to stay completely out of your way.
+**GhostVolume** is a minimalist, privacy-first browser extension that amplifies the audio of videos, live streams, and music in your browser up to **600%**.
 
-## ✨ Features
+Unlike other volume boosters, GhostVolume guarantees **absolute privacy** and is designed to stay completely out of your way. Built with a natively rendered dark UI and a dynamic audio compressor for safe listening, it operates entirely locally. It requires only the `activeTab` permission, ensuring code is injected **only** when you explicitly click the extension button.
 
-- **Up to 600% Boost:** Amplify audio on any tab far beyond the default system limits.
-- **Absolute Privacy:** Requires only the `activeTab` permission. We **do not** track your tabs, history, or clicks. Data never leaves your browser.
-- **Minimalist UI:** A clean, dark-themed interface built for speed and simplicity. 
-- **Safe Mode:** Built-in dynamic compressor (Soft Limiter) prevents audio clipping and protects your speakers from distortion at high volumes.
-- **Zero Bloat:** Lightweight footprint. No background scripts running constantly. Code is only injected when you explicitly click the extension button.
-- **Open Source:** Fully open source under the GNU GPLv3 license.
+---
 
 ## 🚀 Installation
 
-### 1. From Firefox Add-ons (AMO)
-[![Firefox Add-on](https://img.shields.io/badge/Firefox-Add--on-FF7139?logo=firefox-browser&logoColor=white)](https://addons.mozilla.org/firefox/addon/ghostvolume/)
+### Official Stores
 
-Install directly from the [Mozilla Add-ons Store](https://addons.mozilla.org/firefox/addon/ghostvolume/). Requires **Firefox 140+**.
+[![Firefox Add-on](https://img.shields.io/badge/Install_from-Mozilla_Add--ons-FF7139?style=for-the-badge&logo=firefox-browser&logoColor=white)](https://addons.mozilla.org/firefox/addon/ghostvolume/)
 
-### 2. Manual Installation (For source & testing)
+Requires **Firefox 140+**.
 
-First, download the source code:
+### Manual Installation (For Source & Testing)
+
 ```bash
 git clone https://github.com/Androdom/ghostvolume.git
 ```
 
-#### 🦊 For Mozilla Firefox:
-1. Open Firefox and navigate to `about:debugging#/runtime/this-firefox`.
-2. Click on the **"Load Temporary Add-on..."** button.
-3. Select the `manifest.json` file located in the cloned `ghost-volume` directory.
-4. GhostVolume is now ready to use!
+<details>
+<summary>🦊 <b>For Mozilla Firefox</b></summary>
+<br>
 
-#### 🌍 For Google Chrome, Edge, and Chromium Browsers:
-1. Open your browser and navigate to `chrome://extensions/` (or `edge://extensions/`).
-2. Turn on **"Developer mode"** (usually a toggle in the top right corner).
-3. Click on the **"Load unpacked"** button.
-4. Select the entire cloned `ghost-volume` **folder**.
-5. Pin the GhostVolume icon to your toolbar and click it to start boosting!
+1. Navigate to `about:debugging#/runtime/this-firefox` in your address bar.
+2. Click the **Load Temporary Add-on...** button.
+3. Select the `manifest.json` file inside the cloned directory.
+</details>
+
+<details>
+<summary>🌍 <b>For Chrome, Edge, and Chromium Browsers</b></summary>
+<br>
+
+1. Navigate to `chrome://extensions/` (or `edge://extensions/`).
+2. Enable **Developer mode** (usually a toggle in the top right).
+3. Click the **Load unpacked** button.
+4. Select the cloned `ghost-volume` folder.
+</details>
+
+---
 
 ## 🇹🇷 Türkçe Açıklama
 
-**GhostVolume**, tarayıcınızdaki ses seviyesini %600'e kadar yükseltebilen, güvenlik ve gizlilik odaklı minimalist bir eklentidir. Chrome, Edge ve Firefox ile uyumludur.
+**GhostVolume**, tarayıcınızdaki ses seviyesini **%600'e kadar** yükseltebilen, güvenlik ve gizlilik odaklı minimalist bir eklentidir. Chrome, Edge ve Firefox ile uyumludur. 
 
-- **Tam Gizlilik:** Yalnızca o an bulunduğunuz sekmeye erişim izni (`activeTab`) ister. Hangi siteleri gezdiğinizi veya ne izlediğinizi takip etmez.
-- **Güvenli Mod:** Akıllı ses sınırlayıcısı sayesinde yüksek seste yaşanan ses çatlamalarını ve hoparlör hasarlarını önler.
-- **Hafif ve Hızlı:** Eklenti simgesine tıklayana kadar sayfalara herhangi bir kod enjekte etmez.
-
-## 🛠 Built With
-- Vanilla JavaScript (ES6)
-- CSS3
-- Web Audio API (AudioContext, GainNode, DynamicsCompressor)
-- WebExtensions API (Manifest V3)
-- Firefox 140+ / Chromium Browsers
-
-## 📄 License
-This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for details.
+Arka planda çalışarak tarayıcınızı yormaz; yalnızca simgesine tıkladığınız sayfada aktif olur ve hiçbir verinizi izlemez. İçerdiği **Güvenli Mod** (Akıllı Ses Sınırlayıcı) sayesinde yüksek seslerde yaşanabilecek cihaz bozulmalarının önüne geçer.
 
 ---
+
+## 🛠 Built With
+
+| Technology | Description |
+|:---:|---|
+| ⚡ **Vanilla JavaScript** | Minimal core logic directly utilizing ES6 without heavy frameworks |
+| 🎨 **CSS3** | Modern dark-themed UI with hardware-accelerated micro-animations |
+| 🎛️ **Web Audio API** | Native `AudioContext`, `GainNode`, and `DynamicsCompressor` integrations |
+| 🧩 **WebExtensions API** | Manifest V3 compatible, utilizing strict and transparent privacy permissions |
+
+---
+
 <div align="center">
-  Made with 💜 by <a href="https://github.com/Androdom">Androdom</a>
+  <br>
+  Made with 💜 by <a href="https://github.com/Androdom"><b>Androdom</b></a>
 </div>

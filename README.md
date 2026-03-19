@@ -7,6 +7,7 @@
     <a href="https://github.com/Androdom/ghostvolume/releases">Releases</a> •
     <a href="#installation">Installation</a> •
     <a href="#features">Features</a> •
+    <a href="PRIVACY.md">Privacy</a> •
     <a href="LICENSE">License</a>
   </p>
 </div>
@@ -28,8 +29,10 @@
 
 ## 🚀 Installation
 
-### 1. From Add-on Stores (Coming Soon)
-Links to the official Chrome Web Store and Mozilla Add-ons store will be placed here once the extension is published.
+### 1. From Firefox Add-ons (AMO)
+[![Firefox Add-on](https://img.shields.io/badge/Firefox-Add--on-FF7139?logo=firefox-browser&logoColor=white)](https://addons.mozilla.org/firefox/addon/ghostvolume/)
+
+Install directly from the [Mozilla Add-ons Store](https://addons.mozilla.org/firefox/addon/ghostvolume/). Requires **Firefox 140+**.
 
 ### 2. Manual Installation (For source & testing)
 
@@ -63,12 +66,13 @@ git clone https://github.com/Androdom/ghostvolume.git
 - Vanilla JavaScript (ES6)
 - CSS3
 - Web Audio API (AudioContext, GainNode, DynamicsCompressor)
-- Firefox WebExtensions API (Manifest V3)
+- WebExtensions API (Manifest V3)
+- Firefox 140+ / Chromium Browsers
 
 ## 📄 License
 This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for details.
 
 ---
 <div align="center">
-  Made with 💜 by <a href="https://www.androdom.com.tr">Androdom</a>
+  Made with 💜 by <a href="https://github.com/Androdom">Androdom</a>
 </div>
